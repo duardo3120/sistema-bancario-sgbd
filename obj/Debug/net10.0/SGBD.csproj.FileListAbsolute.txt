@@ -1,0 +1,14 @@
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\bin\Debug\net10.0\SGBD.exe
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\bin\Debug\net10.0\SGBD.deps.json
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\bin\Debug\net10.0\SGBD.runtimeconfig.json
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\bin\Debug\net10.0\SGBD.dll
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\bin\Debug\net10.0\SGBD.pdb
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\obj\Debug\net10.0\SGBD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\obj\Debug\net10.0\SGBD.AssemblyInfoInputs.cache
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\obj\Debug\net10.0\SGBD.AssemblyInfo.cs
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\obj\Debug\net10.0\SGBD.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\obj\Debug\net10.0\SGBD.dll
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\obj\Debug\net10.0\refint\SGBD.dll
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\obj\Debug\net10.0\SGBD.pdb
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\obj\Debug\net10.0\SGBD.genruntimeconfig.cache
+C:\Users\Eduardo\OneDrive\Desktop\dev\SGBD\obj\Debug\net10.0\ref\SGBD.dll
