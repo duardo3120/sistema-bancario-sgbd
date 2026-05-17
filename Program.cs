@@ -12,6 +12,7 @@ while (true)
     Console.WriteLine("3 - Depositar");
     Console.WriteLine("4 - Sacar");
     Console.WriteLine("5 - Relatórios");
+    Console.WriteLine("6 - Exibir Extrato");
     Console.WriteLine("0 - Sair");
     Console.Write("Escolha uma opção: ");
 
@@ -27,17 +28,26 @@ while (true)
             Console.WriteLine("Qual tipo de conta deseja? Corrente / Poupanca");
             string tipo = Console.ReadLine() ?? "";
 
-            int numeroGerado = new Random().Next(1, 9999);
+            int numeroGerado;
+            do
+            {
+                numeroGerado = new Random().Next(1, 9999); // Gerar número aleatório entre 1 e 9999
+            } while (banco.ContaExiste(numeroGerado));
 
             Conta novaConta; // Criando apenas a conta não fica redundante o código
 
-            if (tipo == "Corrente")
+            if (tipo.ToUpper() == "CORRENTE")
             {
                 novaConta = new ContaCorrente(numeroGerado, nome);
             }
+            else if (tipo.ToUpper() == "POUPANCA")
+            {
+                novaConta = new ContaPoupanca(numeroGerado, nome);
+            }
             else
             {
-                novaConta = new ContaCorrente(numeroGerado, nome);
+                Console.WriteLine("Tipo de conta inválida! Conta não criada.\n");
+                break; // O break aqui é para sair do case e voltar para o menu, evitando criar uma conta sem tipo definido
             }
 
             banco.AdicionarConta(novaConta);
@@ -56,7 +66,7 @@ while (true)
 
             Console.WriteLine("Por favor informar número da conta destino");
             int contaDestino = int.Parse(Console.ReadLine() ?? "0");
-            Console.WriteLine($"Operação concluída com sucesso para {contaDestino}");
+
             try
             {
                 banco.Transferir(contaOrigem, valor, contaDestino, trans);
@@ -122,6 +132,20 @@ while (true)
                 Console.WriteLine($"Titular: {conta.Nome} | Saldo: R$ {conta.Saldo}");
             }
 
+            break;
+
+        case "6":
+            Console.WriteLine("Por favor informe sua conta");
+            int contaExtrato = int.Parse(Console.ReadLine() ?? "0");
+
+            try
+            {
+                banco.ExibirExtrato(contaExtrato);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro: {ex.Message}");
+            }
             break;
 
         case "0":

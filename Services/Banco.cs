@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using SGBD.Models;
 
 namespace SGBD.Services
@@ -7,6 +6,23 @@ namespace SGBD.Services
     {
         private Dictionary<int, Conta> contas = new Dictionary<int, Conta>(); //key, value, nome = new dict, key, value
 
+        public void ExibirExtrato(int numeroConta)
+        {
+            if (contas.ContainsKey(numeroConta))
+            {
+                Conta conta = contas[numeroConta];
+                conta.ExibirExtrato();
+            }
+            else
+            {
+                Console.WriteLine("Conta não encontrada.");
+            }
+        }
+
+        public bool ContaExiste(int numeroConta)
+        {
+            return contas.ContainsKey(numeroConta);
+        }
         public List<Conta> ObterTodasAsContas()
         {
             return contas.Values.ToList();

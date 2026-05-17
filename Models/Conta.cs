@@ -1,10 +1,3 @@
-//Propriedade Base
-// Metodo depositar concreto
-// Metodo Sacar abstrato
-//Exibirextrato
-
-using System.Diagnostics.Contracts;
-
 namespace SGBD.Models
 {
     public abstract class Conta
@@ -79,7 +72,7 @@ namespace SGBD.Models
 
         public void ExibirExtrato()
         {
-            Console.WriteLine($"Olá, {Nome}, seu saldo atual é {Saldo}");
+            Console.WriteLine($"Olá, {Nome}, seu saldo atual é {Saldo:F2}");
 
             Console.WriteLine("Abaixo, você poderá verificar todo seu histórico");
 
